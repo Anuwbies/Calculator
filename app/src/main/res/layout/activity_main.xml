@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingHorizontal="30dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="SIMPLE CALCULATOR"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/num1st"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Input a Number"
+        android:inputType="number"
+        android:paddingBottom="5dp"
+        android:importantForAutofill="no"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/num2nd"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Input a Number"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1st"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="7dp"
+        android:text="Answer"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2nd">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBtn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Addition"
+            android:textColor="@color/white"
+            android:background="@drawable/btn"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subBtn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Subtraction"
+            android:textColor="@color/white"
+            android:background="@drawable/btn"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mulBtn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="Multiplication"
+            android:textColor="@color/white"
+            android:background="@drawable/btn"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/divBtn"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:text="Division"
+            android:background="@drawable/btn"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
